@@ -14,51 +14,63 @@ export const NavList = [
         id : 1 ,
         svg: <HomeSvg/>,
         title: 'View site',
+        reference: '/view',
     },
     {
         id : 2 ,
         svg: <FilePlusSvg/>,
         title: 'Create page',
+        reference: '/createPage',
     },
     {
         id : 3 ,
         svg: <BlogSvg/>,
-        title: 'Blog articles'},
+        title: 'Blog articles',
+        reference: '/blog',
+    },
     {
         id : 4 ,
         svg: <FilesSvg/>,
-        title: 'Files'
+        title: 'Files',
+        reference:'/files'
     },
     {
         id : 5 ,
         svg: <UsersSvg/>,
-        title: 'Users'
+        title: 'Users',
+        reference: '/users',
     },
     {
         id : 6 ,
         svg: <SubsSvg/>,
-        title: 'Subscriptions'
+        title: 'Subscriptions',
+        reference: '/subs',
     },
     {
         id : 7 ,
         svg: <ArchivedSvg/>,
-        title: 'Archived pages'
+        title: 'Archived pages',
+        reference: '/archived',
     },
 ]
 export const BottomNavList = [
     {
         id : 1 ,
         svg: <ThemesSvg/> ,
-        title: 'Themes'
+        title: 'Themes',
+        reference: '/themes',
     },
     {
         id :2 ,
         svg: <PluginsSvg/>,
-        title: 'Plugins'
+        title: 'Plugins',
+        reference: '/plugins',
+
     },
     {
         id : 3 ,
         svg: <UpdateSvg/>,
-        title: 'Update plans'
+        title: 'Update plans',
+        reference: '/update',
     },
 ];

@@ -11,13 +11,23 @@ const Navigation = () => {
             <Typography className={classes.navigationTitle} variant='h3'>Manage</Typography>
             {NavList.map((elem) => {
                 return (
-                    <NavigationItem id={elem.id} icon={elem.svg} text={elem.title} ></NavigationItem>
+                    <NavigationItem
+                        id={elem.id}
+                        icon={elem.svg}
+                        text={elem.title}
+                        reference={elem.reference}
+                    />
                 );
             })}
             <Typography className={classes.navigationTitle} variant='h3'>Pro features</Typography>
             {BottomNavList.map((elem) => {
                 return (
-                    <NavigationItem id={elem.id} icon={elem.svg} text={elem.title}></NavigationItem>
+                    <NavigationItem
+                        id={elem.id}
+                        icon={elem.svg}
+                        text={elem.title}
+                        reference={elem.reference}
+                    />
                 );
             })}
         </Box>

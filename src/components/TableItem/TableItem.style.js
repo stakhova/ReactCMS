@@ -4,10 +4,13 @@ export const useStyles = makeStyles((theme) => ({
     tableItemWrap : {
         display:'flex',
         alignItems: 'center',
-        justifyContent:'space-between',
+        justifyContent:'flex-start',
         background: theme.palette.secondary.loginBack,
         marginBottom: theme.spacing(1.9),
         padding:theme.spacing(3, 5.4, 3 ,3)
+    },
+    tableItemName:{
+        width: 'calc(49% - 6rem)',
     },
     tableTitle:{
         color: theme.palette.primary.main,
@@ -15,13 +18,15 @@ export const useStyles = makeStyles((theme) => ({
     tableDate:{
         color: theme.palette.text.dateTitle,
     },
+    tableStatus:{
+        width:'35%',
+    },
     tableStats:{
         display:"flex",
-        justifyContent:"center",
+        justifyContent:"flex-start",
         alignItems:"center",
         minWidth:"12.2rem",
-        // marginLeft:'19.7rem'
-
+        marginRight:'5vw ',
     },
     tableStatsTitle:{
         color: theme.palette.text.dateTitle,

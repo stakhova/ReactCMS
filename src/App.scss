@@ -39,4 +39,25 @@ html{
   @media only screen and (max-width: 666px) {
     font-size: 10px;
   }
+  a{
+    text-decoration: none;
+  }
+}
+
+
+.MuiBox-root{
+  & .active{
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #D53F8C;
+      border-radius: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -2.3rem;
+    }
+  }
 }

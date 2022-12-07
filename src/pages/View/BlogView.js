@@ -2,16 +2,15 @@ import {Box, Container} from "@mui/material";
 import {FlexWrap} from "./BlogView.style";
 import Header from "../../components/Header/Header";
 import Navigation from "../../components/Navigation/Navigation";
-import TableBlog from "../../components/TableBlog/TableBlog";
-
-function BlogView() {
+import { Outlet} from "react-router-dom";
+function View() {
     return (
         <Box >
             <Header/>
             <Container maxWidth={false} >
                 <Box style={FlexWrap}>
                     <Navigation/>
-                    <TableBlog/>
+                    <Outlet/>
                 </Box>
             </Container>
         </Box>
@@ -19,4 +18,4 @@ function BlogView() {
     );
 };
 
-export default BlogView;
+export default View;

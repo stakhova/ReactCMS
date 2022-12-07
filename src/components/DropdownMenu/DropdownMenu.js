@@ -2,7 +2,7 @@
 // import IconButton from '@mui/material/IconButton';
 // import Menu from '@mui/material/Menu';
 // import MenuItem from '@mui/material/MenuItem';
-// import EditttSvg from "../../img/icon/EditttSvg";
+// import TableEditSvg from "../../img/icon/TableEditSvg";
 //
 //
 // const options = [
@@ -45,7 +45,7 @@
 //                 aria-haspopup="true"
 //                 onClick={handleClick}
 //             >
-//                 <EditttSvg />
+//                 <TableEditSvg />
 //             </IconButton>
 //             <Menu
 //                 id="long-menu"

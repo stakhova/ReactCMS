@@ -1,31 +1,27 @@
 import {Avatar, Box, Button,Container} from "@mui/material";
 import { useStyles} from './Header.style'
 import LogoFullSvg from "../../img/icon/LogoFullSvg";
-import ava from "../../img/avatar.png"
+import ButtonCustom from "../ButtonCustom/ButtonCustom";
+import HeaderUserInfo from "../HeaderUserInfo/HeaderUserInfo";
+import {Link} from "react-router-dom";
 
-
-
-function Header() {
+function Header( ) {
     const classes = useStyles();
+    const urlReg = window.location.href.endsWith('registration')
+
     return (
         <Box className={classes.headerWrap}>
             <Container maxWidth={false} >
                 <Box className={classes.headerBlock}>
-                    {/*<Link>*/}
+                    <Link to = '/main'>
                         <LogoFullSvg/>
-                    {/*</Link>*/}
-                    <Box className={classes.headerInfo}>
-                        <Button variant='text'> Pro plan</Button>
-                        <Avatar
-                            className={classes.headerAvatar}
-                            alt="Remy Sharp"
-                            src={ava}
-                            sx={{
-                                width: 50,
-                                height: 50,
-                            }}
-                        />
-                    </Box>
+                    </Link>
+                    { urlReg
+                        ? <ButtonCustom
+                            variant = 'string'
+                            buttonText = "Sign in"/>
+                        : <HeaderUserInfo/>
+                    }
                 </Box>
             </Container>
         </Box>

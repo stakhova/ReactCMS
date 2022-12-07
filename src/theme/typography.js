@@ -1,5 +1,3 @@
-import BlogView from "../pages/BlogView/BlogView";
-
 const typography = {
     htmlFontSize:16,
     fontSize:14,
@@ -7,10 +5,18 @@ const typography = {
     h1: {
         fontSize:' 10rem',
         lineHeight: ' 11.7rem ',
+        color:'white',
+        'mark':{
+            color:'#2D3748',
+            background: 'transparent'
+        }
     },
     h2: {
         fontSize:' 4rem',
         lineHeight: '4.7rem ',
+        color:'white',
+        margin:'1.4rem 0 5rem'
+
     },
     h3: {
         fontSize:'1.8rem',

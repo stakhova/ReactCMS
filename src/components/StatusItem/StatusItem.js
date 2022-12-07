@@ -5,9 +5,24 @@ import {useStyles} from "./StatusItem.style";
 
 const StatusItem= ({postStatus}) => {
     const classes = useStyles();
-    const classCustom = (postStatus === "Published" ? classes.statusPublished : (postStatus === "Draft" ? classes.statusDraft : (postStatus === "Scheduled" ? classes.statusScheduled : null)));
+    let classCustom = '';
+    switch(postStatus) {
+        case 'Published':
+            classCustom = classes.statusPublished
+            break
+        case 'Draft':
+            classCustom = classes.statusDraft
+            break
+        case 'Scheduled':
+            classCustom = classes.statusScheduled
+            break
+        default:
+            classCustom = '';
+    }
     return (
-        <Box className = {classCustom}>{postStatus}</Box>
+        <Box className = {[classes.statusItemValue, classCustom]}>
+            {postStatus}
+        </Box>
     );
 };
 

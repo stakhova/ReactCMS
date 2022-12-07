@@ -1,13 +1,19 @@
 
 import {Typography,Box} from "@mui/material";
-import {NavItemWrap,NavItemText} from "./NavigationItem.style";
+import {NavItemWrap,NavItemText, NavItemLink} from "./NavigationItem.style";
+import {NavLink} from "react-router-dom";
 
-const NavigationItem= ({icon,text}) => {
+const NavigationItem= ({reference,icon,text}) => {
     return (
-        <Box style={NavItemWrap}>
-            <Box>{icon}</Box>
-            <Typography style={NavItemText} variant='h3'>{text}</Typography>
-        </Box>
+        <NavLink to={reference} style={NavItemLink}>
+            <Box style={NavItemWrap}>
+                <Box>{icon}</Box>
+                <Typography
+                    style={NavItemText}
+                    variant='h3'>{text}
+                </Typography>
+            </Box>
+        </NavLink>
     );
 };
 
