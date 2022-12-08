@@ -4,6 +4,7 @@ import {useStyles} from "./Main.style";
 import ButtonCustom from "../../components/ButtonCustom/ButtonCustom";
 import React from "react";
 import HeaderNavigation from "../../components/HeaderNavigation/HeaderNavigation";
+import Footer from "../../components/Footer/Footer";
 
 function Main() {
     const classes = useStyles();
@@ -25,10 +26,16 @@ function Main() {
                         variant='mainPage'
                         buttonText='Get started free'/>
                 </Link>
+                <Typography
+                    sx={{margin:'2.3rem 0 8.5rem'}}
+                    variant='body1' >
+                    *no card needed
+                </Typography>
                 <Box className={classes.mainImg}>
                     <img src="../../img/MainPic.png"  alt=""/>
                 </Box>
             </Container>
+            <Footer/>
         </Box>
     );
 };

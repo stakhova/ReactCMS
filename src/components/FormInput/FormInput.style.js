@@ -12,6 +12,9 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'left',
         marginBottom: theme.spacing(2.1),
     },
+    inputError:{
+        border:'1px solid red'
+    },
     labelItemText:{
         marginLeft: theme.spacing(1.3),
     }

@@ -9,7 +9,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     formWrap:{
         padding: theme.spacing(3,4.2,2.6,4.2),
-        margin:"0 auto",
+        margin:"9rem auto 0 ",
         background:"white",
         width:"51.2rem"
     },

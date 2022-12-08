@@ -1,4 +1,4 @@
-import {Box, Container} from "@mui/material";
+import {Box} from "@mui/material";
 import FormCustom from "../../components/FormCustom/FormCustom";
 import React from "react";
 import Header from "../../components/Header/Header";
@@ -12,9 +12,7 @@ function RegPage() {
             <Box className={classes.loginWrap}>
                 <Header/>
                 {/*{ urlReg ? <Header/> : null}*/}
-                <Container maxWidth={false} >
-                    <FormCustom/>
-                </Container>
+                <FormCustom/>
             </Box>
         </>
     );

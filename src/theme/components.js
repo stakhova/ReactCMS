@@ -32,7 +32,6 @@ const components = {
                 lineHeight:'1.9rem',
                 color: `#2C5282`,
                 background:"#E2E8F0",
-
             },
         },
     },
@@ -50,16 +49,13 @@ const components = {
         styleOverrides: {
             root: {
                 color:`#fff`,
-                background:`#2A4365`,
+                backgroundColor:`#2A4365`,
                 borderRadius:'0.5rem',
                 width:'20.1rem',
                 padding:"1.8rem 0",
                 fontSize:"2rem",
                 lineHeight:"2.3rem",
                 textDecoration:"none",
-                "&:hover": {
-                    background:`#2A4365`,
-                }
             },
         },
 
@@ -85,6 +81,19 @@ const components = {
                     padding: "1rem 2.4rem ",
                     color:`white`,
                     border:`0.1rem solid white`,
+                    textTransform: 'initial',
+                    fontSize:"2rem",
+                    lineHeight:"2.3rem",
+                }
+            },
+            {
+                props: {variant: "footer"},
+                style:{
+                    textDecoration:"none",
+                    maxWidth:"max-content",
+                    background:'transparent',
+                    padding: "1rem 2.4rem ",
+                    color:`white`,
                     textTransform: 'initial',
                     fontSize:"2rem",
                     lineHeight:"2.3rem",
@@ -119,7 +128,7 @@ const components = {
                 }
             },
             {
-                props: {variant: "regist"},
+                props: {variant: "main"},
                 style:{
                     minWidth: '20.1rem',
                     width: 'max-content',

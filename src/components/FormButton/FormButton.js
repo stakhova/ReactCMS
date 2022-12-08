@@ -12,8 +12,8 @@ const FormButton = () => {
         <>
         { urlReg
             ?
-            <Box className = {classes.buttonLogin}>
-                <ButtonCustom type='submit' variant='registr' buttonText='Register'/>
+            <Box className = {classes.buttonLogin} sx={{justifyContent:"flex-end"}}>
+                <ButtonCustom type='submit' variant='main' buttonText='Register'/>
             </Box>
             :
             <>
@@ -23,7 +23,7 @@ const FormButton = () => {
                         buttonText='Forgot password?'/>
                     <ButtonCustom
                         type='submit'
-                        variant='registr'
+                        variant='main'
                         buttonText='Sing in'/>
                 </Box>
                 <Box className = {classes.buttonLogin}>

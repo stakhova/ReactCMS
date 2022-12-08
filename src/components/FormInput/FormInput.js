@@ -1,5 +1,3 @@
-
-
 import {Box, InputLabel, TextField, Typography} from "@mui/material";
 import {useStyles} from "./FormInput.style";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
@@ -7,7 +5,6 @@ import React from "react";
 
 
 const FormInput = (props ) =>{
-
     const classes = useStyles();
     const { labelIcon, labelText, value,onChange,onBlur,name,type,id,formik,elem} = props;
     return (
@@ -20,7 +17,7 @@ const FormInput = (props ) =>{
                 </Typography>
             </InputLabel>
             <TextField
-                className = {classes.inputItem}
+                // className = {(formik.touched && formik.error) ? "classes.inputError" : ""}
                 value={value}
                 onChange={onChange}
                 onBlur={onBlur}
@@ -37,18 +34,3 @@ const FormInput = (props ) =>{
 
 export default FormInput;
 
-
-// <Box className={classes.inputWrap}>
-//     <label className = {classes.labelItem} htmlFor={name}>
-//         <Box>{labelIcon}</Box>
-//         <Typography sx={{marginLeft:'1.3rem'}} variant='h6'>{labelText}</Typography>
-//     </label>
-//     <input
-//         className = {classes.inputItem}
-//         value={value}
-//         onChange={onChange}
-//         onBlur={onBlur}
-//         name={name}
-//         type={type}
-//     />
-// </Box>

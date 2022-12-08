@@ -5,7 +5,6 @@ const typography = {
     h1: {
         fontSize:' 10rem',
         lineHeight: ' 11.7rem ',
-        color:'white',
         'mark':{
             color:'#2D3748',
             background: 'transparent'
@@ -14,9 +13,7 @@ const typography = {
     h2: {
         fontSize:' 4rem',
         lineHeight: '4.7rem ',
-        color:'white',
         margin:'1.4rem 0 5rem'
-
     },
     h3: {
         fontSize:'1.8rem',
