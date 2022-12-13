@@ -13,14 +13,18 @@ function Header( ) {
         <Box className={classes.headerWrap}>
             <Container maxWidth={false} >
                 <Box className={classes.headerBlock}>
-                    <Link to = '/main'>
+                    <Link to = '/'>
                         <LogoFullSvg/>
                     </Link>
                     { urlReg
-                        ? <ButtonCustom
-                            variant = 'string'
-                            buttonText = "Sign in"/>
-                        : <HeaderUserInfo/>
+                        ?
+                        <Link to = '/login'>
+                           <ButtonCustom
+                               variant = 'string'
+                               buttonText = "Sign in"/>
+                        </Link>
+                        :
+                        <HeaderUserInfo/>
                     }
                 </Box>
             </Container>

@@ -9,6 +9,11 @@ export const useStyles = makeStyles((theme) => ({
         width:'12rem',
         padding:'0.7rem 0',
         textAlign: 'center',
+        textTransform: 'capitalize'
+    },
+    statusPublishedFull:{
+        background:theme.palette.info.colorPublished,
+        color:theme.palette.secondary.main,
     },
     statusPublished:{
         border: `0.2rem solid ${theme.palette.info.colorPublished}`,

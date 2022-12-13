@@ -1,55 +1,50 @@
-import React from "react";
+import {useState} from "react";
 import './App.scss'
-
-import {Switch, ThemeProvider} from '@mui/material';
+import {ThemeProvider} from '@mui/material';
 import theme from "./theme/theme";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Main from "./pages/Main/Main";
 import TableBlog from "./components/TableBlog/TableBlog";
-import View from "./pages/View/BlogView";
-import StatusItem from "./components/StatusItem/StatusItem";
+import View from "./pages/View/View";
+import CreateView from "./components/CreateView/CreateView";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegPage from "./pages/RegPage/RegPage";
 import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 
-const App = () => (
-
+const App = () => {
+    return (
         <ThemeProvider theme={theme}>
-
-            {/*<BrowserRouter>*/}
-            {/*    <Routes>*/}
-            {/*        <Route path="/" element={<PrivateRoute />}>*/}
-            {/*            <Route path="/"element={<View />}>*/}
-            {/*                <Route index  path="view"  element={<TableBlog/>} />*/}
-            {/*                <Route path="createPage" element={<StatusItem />} />*/}
-            {/*                <Route path="files" element={<StatusItem />} />*/}
-            {/*            </Route>*/}
-            {/*        </Route>*/}
-            {/*        <Route path="login" element={<PublicRoute restricted />}>*/}
-            {/*            <Route index element={<LoginPage />} />*/}
-            {/*        </Route>*/}
-            {/*        <Route path="registration" element={<PublicRoute restricted />}>*/}
-            {/*            <Route index element={<RegPage />} />*/}
-            {/*        </Route>*/}
-            {/*        <Route path="*" element={<Main/>} />*/}
-            {/*    </Routes>*/}
-            {/*</BrowserRouter>*/}
-
             <BrowserRouter>
                 <Routes>
-                    <Route index path="main" element={<Main/>}/>
-                    <Route path="login" element={<LoginPage/>}/>
-                    <Route path="registration" element={<RegPage />}/>
-                    <Route path="/"element={<View />}>
-                        <Route index  path="view"  element={<TableBlog/>} />
-                        <Route path="createPage" element={<StatusItem />} />
-                        <Route path="files" element={<StatusItem />} />
+                    <Route path="/" element={<Main/>}/>
+                    <Route path="registration"
+                           element = {<PublicRoute restricted>
+                                        <RegPage/>
+                                    </PublicRoute>
+                        }
+                    />
+                    <Route  path="login"
+                           element = {<PublicRoute restricted>
+                                        <LoginPage/>
+                                    </PublicRoute>
+                        }
+                    />
+                    <Route  path="view"
+                           element = { <PrivateRoute>
+                               <View/>
+                           </PrivateRoute>
+                           }
+                    />
+                    <Route path="*" element={<View/>}>
+                        <Route index path="view" element={<TableBlog/>}/>
+                        <Route path="createView" element={<CreateView/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>
         </ThemeProvider>
-)
+    )
+}
 
 export default App;
 

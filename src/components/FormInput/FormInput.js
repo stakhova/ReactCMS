@@ -17,7 +17,6 @@ const FormInput = (props ) =>{
                 </Typography>
             </InputLabel>
             <TextField
-                // className = {(formik.touched && formik.error) ? "classes.inputError" : ""}
                 value={value}
                 onChange={onChange}
                 onBlur={onBlur}

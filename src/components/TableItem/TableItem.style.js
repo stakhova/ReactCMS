@@ -31,7 +31,19 @@ export const useStyles = makeStyles((theme) => ({
     tableStatsTitle:{
         color: theme.palette.text.dateTitle,
         padding:theme.spacing(0,0.9,0,0.7)
+    },
+    tableAuthor:{
+        display:'flex',
+        alignItems:'center',
+        gap:"2.3rem"
+    },
+    tableAuthorStatus:{
+        background: theme.palette.text.main,
+        borderRadius: '5rem',
+        padding:theme.spacing(0.6,1.6),
+        color: theme.palette.secondary.main,
     }
+
 }))
 
 

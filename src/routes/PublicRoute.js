@@ -1,32 +1,20 @@
-//
-//
-//
-//
-//
-//
-//
+import React from 'react';
+import {Navigate} from "react-router-dom";
+import {getCookie} from "../utils";
 
-
-
-import {
-    Route,
-    Navigate,
-} from 'react-router-dom';
-
-function PublicRoute({ children, isAuthenticated, ...rest }) {
+const PublicRoute = ({ children}) => {
+    const isLogin = getCookie('autorization')
     return (
-        <Route
-            {...rest}
-            render={
-                ({ location }) => (
-                    !isAuthenticated ? (
-                        children
-                    ) : (
-                        <Navigate to="/login" />
-                    ))
+        <>
+            {isLogin
+                ? <Navigate to="/login"/>
+                : children
             }
-        />
-    );
+        </>
+    )
+
 }
 
 export default PublicRoute;
+
+

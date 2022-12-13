@@ -1,40 +1,19 @@
 import React from 'react';
 import {useFormik} from "formik";
 import {loginSchema} from "../../schemas";
+import {useNavigate} from "react-router-dom";
 import FormInput from "../FormInput/FormInput";
 import {FormListLogin, FormListRegistration} from "./FormCustom.mock.js";
 import {useStyles} from "./FormCustom.style";
 import FormButton from "../FormButton/FormButton";
+import {checkLogin} from '../../utils';
 
 
 const FormCustom = () => {
+
     const classes = useStyles();
     const urlReg = window.location.href.endsWith('registration')
-
-   function getCookie (name) {
-        let results = document.cookies.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-       console.log(results)
-        if (results){
-            console.log(results)
-            return (unescape(results[2]))
-        }
-        else
-            return null;
-    }
-
-    // function getCookie(cName) {
-    //     const name = cName + "=";
-    //     const cDecoded = decodeURIComponent(document.cookie); //to be careful
-    //     const cArr = cDecoded.split('; ');
-    //     let res;
-    //     cArr.forEach(val => {
-    //         if (val.indexOf(name) === 0) res = val.substring(name.length);
-    //     })
-    //     console.log(res)
-    //     return res
-    // }
-
-
+    const navigate = useNavigate()
 
     let isReg = false;
     switch (urlReg) {
@@ -43,6 +22,16 @@ const FormCustom = () => {
             break
         default:
             isReg = false
+
+    }
+
+    const isAuth = (values) => {
+       checkLogin(values)
+       if(checkLogin(values)){
+           navigate ('/view')
+          return true
+       } else
+           alert('Wrong email or password')
     }
 
     const formik = useFormik({
@@ -53,14 +42,20 @@ const FormCustom = () => {
             isReg: isReg
         },
         validationSchema: loginSchema,
-        onSubmit: (values) => {
+        onSubmit: (values,actions) => {
             if (urlReg) {
-                // console.log(cookies)
                 document.cookie = "user=" + JSON.stringify(values);
-                getCookie('name')
-                // console.log(cookies)
+                actions.resetForm({
+                    values: {
+                        text: '',
+                        email: '',
+                        password: '',
+                    }
+                })
+                alert('Congratulations,you are registered!')
+                navigate('/login')
             } else {
-                alert(JSON.stringify(values, null, 2))
+                isAuth(values)
             }
         }
     });

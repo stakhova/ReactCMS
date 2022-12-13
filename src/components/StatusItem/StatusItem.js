@@ -10,6 +10,9 @@ const StatusItem= ({postStatus}) => {
         case 'Published':
             classCustom = classes.statusPublished
             break
+        case 'published':
+            classCustom = classes.statusPublishedFull
+            break
         case 'Draft':
             classCustom = classes.statusDraft
             break

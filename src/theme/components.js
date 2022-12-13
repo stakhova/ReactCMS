@@ -4,8 +4,29 @@ const components = {
             root: {
                 width:'100%',
                 maxWidth:"144rem",
-                paddingRight:'0',
-                paddingLeft:'0'
+                paddingRight:'0!important',
+                paddingLeft:'0!important'
+            },
+        },
+    },
+    MuiList:{
+        styleOverrides: {
+            root: {
+                borderRadius:'0.5rem',
+                backgroundColor: '#FFFCFE',
+                padding:'2rem 1.6rem 2.5rem 2.5rem'
+            },
+        },
+    },
+    MuiMenuItem:{
+        styleOverrides: {
+            root: {
+                borderRadius:'0.5rem',
+                backgroundColor: '#FFFCFE',
+                fontSize: '1.6rem',
+                lineHeight: '1.9rem',
+                fontWeight: "400"
+
             },
         },
     },

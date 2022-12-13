@@ -4,7 +4,7 @@ export const useStyles = makeStyles((theme) => ({
     mainWrap:{
         backgroundColor: theme.palette.text.navTitle,
         height:"100rem",
-        width:"100vw",
+        width:"100%",
         textAlign:'center',
         borderBottomLeftRadius:"45rem",
         borderBottomRightRadius:"45rem",
@@ -20,6 +20,9 @@ export const useStyles = makeStyles((theme) => ({
         display:"flex",
         alignItems:"center",
         justifyContent:"center",
+        maxWidth: '112.3rem',
+        margin:'0 auto',
+        maxHeight: '69.7rem',
         marginBottom:"30rem",
         img:{
             width:"100%",

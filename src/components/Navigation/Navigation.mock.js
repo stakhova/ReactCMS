@@ -20,7 +20,7 @@ export const NavList = [
         id : 2 ,
         svg: <FilePlusSvg/>,
         title: 'Create page',
-        reference: '/createPage',
+        reference: '/createView',
     },
     {
         id : 3 ,

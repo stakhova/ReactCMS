@@ -3,6 +3,9 @@ import {makeStyles} from "@mui/styles";
 export const useStyles = makeStyles((theme) => ({
     loginWrap:{
         height:'100vh',
-        background: theme.palette.secondary.loginBack
+        background: theme.palette.secondary.loginBack,
+        '& > *:last-child':{
+            marginTop:'7rem'
+        }
     },
 }))
