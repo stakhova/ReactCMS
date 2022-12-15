@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
         background: theme.palette.secondary.loginBack,
         display:"flex",
         alignItems:"center",
-        justifyContent:"center"
+        justifyContent:"center",
+        flexDirection:"column"
     },
 }))

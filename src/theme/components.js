@@ -14,7 +14,7 @@ const components = {
             root: {
                 borderRadius:'0.5rem',
                 backgroundColor: '#FFFCFE',
-                padding:'2rem 1.6rem 2.5rem 2.5rem'
+                padding:'2rem 1.6rem 0 2.5rem'
             },
         },
     },
@@ -25,23 +25,40 @@ const components = {
                 backgroundColor: '#FFFCFE',
                 fontSize: '1.6rem',
                 lineHeight: '1.9rem',
-                fontWeight: "400"
-
+                fontWeight: "400",
+                marginBottom:"2.4rem",
+                'svg':{
+                    marginRight:"1.5rem",
+                }
             },
         },
     },
     MuiPagination: {
         styleOverrides: {
             root: {
+                marginTop:"4.7rem",
                 'ul': {
                     justifyContent: 'center',
                     color: `#2C5282`,
                 },
-                'selected':{
-                    backgroundColor: 'red',
-                }
-
             },
+        },
+    },
+    MuiPaginationItem:{
+      styleOverrides:{
+        root:{
+            margin: '0 0.5rem',
+            background: '#E2E8F0',
+            color:"#2C5282",
+
+        }
+      },
+    },
+    MuiSelected:{
+        styleOverrides:{
+            root:{
+                backgroundColor:  'red',
+            }
         },
     },
     MuiButtonBase:{

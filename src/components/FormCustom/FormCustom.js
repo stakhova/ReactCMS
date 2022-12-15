@@ -6,15 +6,12 @@ import FormInput from "../FormInput/FormInput";
 import {FormListLogin, FormListRegistration} from "./FormCustom.mock.js";
 import {useStyles} from "./FormCustom.style";
 import FormButton from "../FormButton/FormButton";
-import {checkLogin} from '../../utils';
-
+import {checkLogin, checkUser} from '../../utils';
 
 const FormCustom = () => {
-
     const classes = useStyles();
     const urlReg = window.location.href.endsWith('registration')
     const navigate = useNavigate()
-
     let isReg = false;
     switch (urlReg) {
         case true:
@@ -24,11 +21,8 @@ const FormCustom = () => {
             isReg = false
 
     }
-
     const isAuth = (values) => {
-       checkLogin(values)
        if(checkLogin(values)){
-           navigate ('/view')
           return true
        } else
            alert('Wrong email or password')
@@ -55,15 +49,18 @@ const FormCustom = () => {
                 alert('Congratulations,you are registered!')
                 navigate('/login')
             } else {
-                isAuth(values)
+                checkUser()
+                    ? isAuth(values)
+                    : alert(`You don't have account`)
+                      navigate('/registration')
             }
         }
     });
     return (
         <>
-            {urlReg ?
-                <form onSubmit={formik.handleSubmit} className={classes.formWrap}>
-                    {FormListRegistration.map((elem) => {
+            <form onSubmit={formik.handleSubmit} className={classes.formWrap}>
+                { isReg
+                    ? FormListRegistration.map((elem) => {
                         return (
                             <FormInput
                                 key={elem.id.toString()}
@@ -75,15 +72,11 @@ const FormCustom = () => {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 formik={formik}
-                                elem={elem.id}
-                            />
+                                elem={elem.id}/>
+
                         );
-                    })}
-                    <FormButton/>
-                </form>
-                :
-                <form onSubmit={formik.handleSubmit} className={classes.formWrap}>
-                    {FormListLogin.map((elem) => {
+                    })
+                    : FormListLogin.map((elem) => {
                         return (
                             <FormInput
                                 key={elem.id.toString()}
@@ -95,17 +88,16 @@ const FormCustom = () => {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 formik={formik}
-                                elem={elem.id}
-                            />
+                                elem={elem.id}/>
+
                         );
-                    })}
-                    <FormButton/>
-                </form>
-            }
+                    })
+                }
+                <FormButton/>
+            </form>
         </>
     );
 };
 
 
 export default FormCustom;
-

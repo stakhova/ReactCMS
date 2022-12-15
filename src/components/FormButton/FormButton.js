@@ -10,31 +10,31 @@ const FormButton = () => {
 
     return (
         <>
-        { urlReg
-            ?
-            <Box className = {classes.buttonLogin} sx={{justifyContent:"flex-end"}}>
-                <ButtonCustom type='submit' variant='main' buttonText='Register'/>
-            </Box>
-            :
-            <>
-                <Box className = {classes.buttonLogin}>
-                    <ButtonCustom
-                        variant='no-back'
-                        buttonText='Forgot password?'/>
-                    <ButtonCustom
-                        type='submit'
-                        variant='main'
-                        buttonText='Sing in'/>
+            { urlReg
+                ?
+                <Box className = {classes.buttonLogin} sx={{justifyContent:"flex-end"}}>
+                    <ButtonCustom type='submit' variant='main' buttonText='Register'/>
                 </Box>
-                <Box className = {classes.buttonLogin}>
-                    <Link to='/registration'>
+                :
+                <>
+                    <Box className = {classes.buttonLogin}>
                         <ButtonCustom
-                            variant='outlined'
-                            buttonText='Don’t have & account?'/>
-                    </Link>
-                </Box>
-            </>
-        }
+                            variant='no-back'
+                            buttonText='Forgot password?'/>
+                        <ButtonCustom
+                            type='submit'
+                            variant='main'
+                            buttonText='Sing in'/>
+                    </Box>
+                    <Box className = {classes.buttonLogin}>
+                        <Link to='/registration'>
+                            <ButtonCustom
+                                variant='outlined'
+                                buttonText='Don’t have & account?'/>
+                        </Link>
+                    </Box>
+                </>
+            }
         </>
     );
 };

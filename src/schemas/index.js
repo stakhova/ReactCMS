@@ -1,6 +1,5 @@
 import * as yup from 'yup';
 
-
 export const loginSchema = yup.object({
     isReg: yup.boolean(),
     text: yup.string()

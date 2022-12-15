@@ -22,6 +22,11 @@ export const checkLogin = (values) => {
     return false;
 }
 
+export const checkUser = () => {
+    let dataRegister = getCookie('user')
+    return dataRegister ? true : false
+}
+
 
 
 

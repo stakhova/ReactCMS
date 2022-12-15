@@ -4,8 +4,6 @@ import HeaderAvatar from "../HeaderAvatar/HeaderAvatar";
 import Ava from "../../img/avatar.png"
 import ButtonCustom from "../ButtonCustom/ButtonCustom";
 
-
-
 function HeaderUserInfo( ) {
     const classes = useStyles();
     return (

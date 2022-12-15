@@ -3,7 +3,6 @@ import {useStyles} from "./FormInput.style";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import React from "react";
 
-
 const FormInput = (props ) =>{
     const classes = useStyles();
     const { labelIcon, labelText, value,onChange,onBlur,name,type,id,formik,elem} = props;
@@ -27,8 +26,6 @@ const FormInput = (props ) =>{
             <ErrorMessage formik={formik} elem={elem}/>
         </Box>
     );
-
-
 }
 
 export default FormInput;

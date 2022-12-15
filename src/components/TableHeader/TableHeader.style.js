@@ -15,4 +15,26 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent:'flex-start',
         width:'100%',
     },
+    tableTitleBlog : {
+        color: theme.palette.primary.main,
+        '&:first-child':{
+            width:"49%"
+        },
+        '&:nth-child(2)':{
+            width:"24%"
+        },
+
+    },
+    tableTitleCreate : {
+        color: theme.palette.primary.main,
+        '&:first-child':{
+            width:"25%"
+        },
+        '&:nth-child(2)':{
+            width:"30%"
+        },
+        '&:nth-child(3)':{
+            width:"23%"
+        },
+    },
 }))

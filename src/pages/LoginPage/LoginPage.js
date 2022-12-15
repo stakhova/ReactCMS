@@ -1,7 +1,7 @@
 import {Box} from "@mui/material";
 import FormCustom from "../../components/FormCustom/FormCustom";
-import React, {useState} from "react";
 import {useStyles} from "./LoginPage.style";
+import LogoLogin from "../../components/LogoLogin/LogoLogin";
 function LoginPage() {
     const classes = useStyles();
     return (

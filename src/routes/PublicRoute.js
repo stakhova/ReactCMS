@@ -1,4 +1,3 @@
-import React from 'react';
 import {Navigate} from "react-router-dom";
 import {getCookie} from "../utils";
 
@@ -7,7 +6,7 @@ const PublicRoute = ({ children}) => {
     return (
         <>
             {isLogin
-                ? <Navigate to="/login"/>
+                ? <Navigate to="/view"/>
                 : children
             }
         </>

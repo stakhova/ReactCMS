@@ -1,5 +1,4 @@
-
-import {Navigate,} from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import {getCookie} from '../utils';
 
 const PrivateRoute = ({ children }) => {
@@ -8,7 +7,7 @@ const PrivateRoute = ({ children }) => {
         <>
             {isLogin
                 ? children
-                : <Navigate to="/login" />
+                : <Navigate to="/" />
             }
         </>
     )

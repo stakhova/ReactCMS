@@ -10,6 +10,7 @@ const palette = {
         paggBack:'#E2E8F0',
         headerBack: '#2D3748',
         buttonShedule: '#BEE3F8',
+        logo:'#63B3ED'
     },
     text:{
         main: '#2C5282',

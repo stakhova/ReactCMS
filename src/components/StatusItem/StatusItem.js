@@ -1,7 +1,5 @@
-
 import {Box} from "@mui/material";
 import {useStyles} from "./StatusItem.style";
-
 
 const StatusItem= ({postStatus}) => {
     const classes = useStyles();
@@ -28,6 +26,5 @@ const StatusItem= ({postStatus}) => {
         </Box>
     );
 };
-
 
 export default StatusItem;

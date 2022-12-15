@@ -1,9 +1,8 @@
-
 import { Pagination} from "@mui/material"
 
 const Pagg= () => {
     return (
-        <Pagination count={3} hidePrevButton hideNextButton />
+        <Pagination color='primary' count={3} hidePrevButton hideNextButton />
     );
 };
 

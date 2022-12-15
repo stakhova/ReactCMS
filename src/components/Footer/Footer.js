@@ -1,10 +1,7 @@
 import {Box, Container, Typography} from "@mui/material"
-
 import {FooterList} from "./Footer.mock"
 import {useStyles} from "./Footer.style";
-
 import {Link} from "react-router-dom";
-
 
 const Footer = () => {
     const classes = useStyles();

@@ -1,7 +1,5 @@
 import { Button} from "@mui/material";
 
-
-
 function ButtonCustom({variant,buttonText,startIcon,type} ) {
     return (
         <Button

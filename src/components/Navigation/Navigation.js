@@ -3,7 +3,6 @@ import NavigationItem from "../NavigationItem/NavigationItem"
 import {NavList, BottomNavList} from "./Navigation.mock"
 import {useStyles} from "./Navigation.style";
 
-
 const Navigation = () => {
     const classes = useStyles();
     return (
