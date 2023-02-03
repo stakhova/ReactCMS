@@ -50,7 +50,17 @@ const components = {
             margin: '0 0.5rem',
             background: '#E2E8F0',
             color:"#2C5282",
-
+            borderRadius:"50%",
+            fontSize: '1.6rem',
+            lineHeight: '1.9rem',
+            fontWeight: "700",
+            width:'3rem',
+            minWidth:'3rem',
+            height:'3rem',
+            "&.Mui-selected": {
+                backgroundColor: "#2C5282!important",
+                color: '#F7FAFC',
+            }
         }
       },
     },

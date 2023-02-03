@@ -7,7 +7,12 @@ const ErrorMessage = ({formik,elem}) =>{
     const classes = useStyles();
     return (
         <>
-            {formik.touched[elem] && Boolean(formik.errors[elem]) ? <Typography className={classes.errorMess}> {formik.errors[elem]}</Typography> : null}
+            {formik.touched[elem] && Boolean(formik.errors[elem])
+                ? <Typography
+                    className = {classes.errorMess}>
+                    {formik.errors[elem]}
+                </Typography>
+                : null}
         </>
 
     );

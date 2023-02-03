@@ -1,3 +1,5 @@
+import {default as data} from "../components/TableBlog/Table.mock.json";
+import usePagination from "@mui/material/usePagination";
 
 
 export const  getCookie = (cookieName) => {
@@ -13,8 +15,7 @@ export const checkLogin = (values) => {
     let dataRegister = getCookie('user')
     let regObj = JSON.parse(dataRegister);
     dataRegister = regObj.email + regObj.password
-    let result =  JSON.parse(JSON.stringify(values))
-    let dataLogin = result.email + result.password
+    let dataLogin = values.email + values.password
     if (dataRegister === dataLogin) {
         document.cookie = "autorization=" + JSON.stringify(true);
         return true;
@@ -27,6 +28,22 @@ export const checkUser = () => {
     return dataRegister ? true : false
 }
 
+// export const changePage = (list) => {
+//     const perpage = 5;
+//     const linkto = '/view?page='
+//     const count = Math.ceil(data.length / perpage);
+//     list = usePagination(data, perpage);
+//
+//
+//     if(list.currentData().length === 0 ){
+//         window.location = linkto + page
+//     }
+//     const handleChange = (e, p) => {
+//         setPage(p);
+//         list.jump(p);
+//     };
+//
+// }
 
 
 

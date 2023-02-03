@@ -6,7 +6,7 @@ const PublicRoute = ({ children}) => {
     return (
         <>
             {isLogin
-                ? <Navigate to="/view"/>
+                ? <Navigate to = "/view"/>
                 : children
             }
         </>

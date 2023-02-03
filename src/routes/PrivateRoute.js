@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }) => {
         <>
             {isLogin
                 ? children
-                : <Navigate to="/" />
+                : <Navigate to = "/" />
             }
         </>
     )

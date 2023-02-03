@@ -16,7 +16,7 @@ const TableItem= ({variant,postDate}) => {
     }
 
     return (
-        <Typography variant={variant}  className={classCustom}>
+        <Typography variant = {variant}  className = {classCustom}>
             Posted {postDate} days ago
         </Typography>
     );

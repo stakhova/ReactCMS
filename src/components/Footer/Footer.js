@@ -6,13 +6,16 @@ import {Link} from "react-router-dom";
 const Footer = () => {
     const classes = useStyles();
     return (
-        <Box className={classes.footerWrap}>
-            <Container maxWidth={false} >
-                <Box className={classes.footerList}>
+        <Box className = {classes.footerWrap}>
+            <Container maxWidth = {false} >
+                <Box className = {classes.footerList}>
                     {FooterList.map((elem) => {
                         return (
-                            <Link to={elem.reference}>
-                                <Typography variant='h6' className={classes.footerItem}>
+                            <Link to = {elem.reference}>
+                                <Typography
+                                    variant = 'h6'
+                                    className = {classes.footerItem}
+                                >
                                     {elem.title}
                                 </Typography>
                             </Link>

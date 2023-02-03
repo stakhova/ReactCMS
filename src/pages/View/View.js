@@ -7,8 +7,8 @@ function View() {
     return (
         <Box >
             <Header/>
-            <Container maxWidth={false} >
-                <Box style={FlexWrap}>
+            <Container maxWidth = {false} >
+                <Box style = {FlexWrap}>
                     <Navigation/>
                     <Outlet/>
                 </Box>

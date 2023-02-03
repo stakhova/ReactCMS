@@ -35,5 +35,47 @@ export const TableBlogList = [
         postStatus: 'Published',
         postStats: '120',
     },
+    {
+        id : 6 ,
+        postTitle: 'Design: A Survival Guide for Beginners',
+        postDate: 3,
+        postStatus: 'Published',
+        postStats: 120,
+    },
+    {
+        id : 7 ,
+        postTitle: 'Design: A Survival Guide for Beginners',
+        postDate: 3,
+        postStatus: 'Published',
+        postStats: '120',
+    },
+    {
+        id : 8 ,
+        postTitle: 'Design: A Survival Guide for Beginners',
+        postDate: 3,
+        postStatus: 'Published',
+        postStats: 120,
+    },
+    {
+        id : 9 ,
+        postTitle: 'Design: A Survival Guide for Beginners',
+        postDate: 3,
+        postStatus: 'Published',
+        postStats: '120',
+    },
+    {
+        id : 10 ,
+        postTitle: 'Design: A Survival Guide for Beginners',
+        postDate: 3,
+        postStatus: 'Published',
+        postStats: 120,
+    },
+    {
+        id : 11 ,
+        postTitle: 'Design: A Survival Guide for Beginners',
+        postDate: 3,
+        postStatus: 'Published',
+        postStats: '120',
+    },
 ]
 

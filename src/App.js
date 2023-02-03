@@ -18,24 +18,48 @@ const App = () => {
                 <Routes>
                     {RoutePublicList.map((elem) => {
                         return (
-                            <Route path={elem.path}
-                                   element = {<PublicRoute>
+                            <Route
+                                path={elem.path}
+                                element = {
+                                    <PublicRoute>
                                        {elem.page}
                                    </PublicRoute>
-                                   }
+                                }
                             />
                         );
                     })}
-                    <Route  path="view"
-                           element = { <PrivateRoute>
+                    <Route
+                        path="view"
+                        element = {
+                            <PrivateRoute>
                                <View/>
-                           </PrivateRoute>
-                           }
+                            </PrivateRoute>
+                        }
                     />
-                    <Route path="*" element={<View/>}>
-                        <Route index path="view" element={<TableBlog/>}/>
-                        <Route path="createView" element={<CreateView/>}/>
-                        <Route path="files" element={<FileView/>}/>
+                    <Route
+                        path="*"
+                        element={
+                            <View/>
+                        }
+                    >
+                        <Route
+                            index
+                            path="view"
+                            element={
+                                <TableBlog/>
+                            }
+                        />
+                        <Route
+                            path="createView"
+                            element={
+                                <CreateView/>
+                            }
+                        />
+                        <Route
+                            path="files"
+                            element={<FileView/>
+                            }
+                        />
                     </Route>
                 </Routes>
             </BrowserRouter>

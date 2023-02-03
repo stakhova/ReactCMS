@@ -9,30 +9,30 @@ import Footer from "../../components/Footer/Footer";
 function Main() {
     const classes = useStyles();
     return (
-        <Box className={classes.mainWrap}>
-            <Container maxWidth={false} >
+        <Box className = {classes.mainWrap}>
+            <Container maxWidth = {false} >
                 <HeaderNavigation/>
                 <Typography
-                    variant='h1'
-                    sx={{fontWeight:'700'}}>
+                    variant = 'h1'
+                    sx = {{fontWeight:'700'}}>
                     Rival <mark>CMS</mark>
                 </Typography>
                 <Typography
-                    variant='h2' >
+                    variant = 'h2' >
                     Fresh new way to build sites
                 </Typography>
-                <Link to='/login'>
+                <Link to = '/login'>
                     <ButtonCustom
-                        variant='mainPage'
-                        buttonText='Get started free'/>
+                        variant = 'mainPage'
+                        buttonText = 'Get started free'/>
                 </Link>
                 <Typography
-                    sx={{margin:'2.3rem 0 8.5rem'}}
-                    variant='body1' >
+                    sx = {{margin:'2.3rem 0 8.5rem'}}
+                    variant = 'body1' >
                     *no card needed
                 </Typography>
-                <Box className={classes.mainImg}>
-                    <img src="../../img/MainPic.png"  alt=""/>
+                <Box className = {classes.mainImg}>
+                    <img src = "../../img/MainPic.png"  alt = ""/>
                 </Box>
             </Container>
             <Footer/>

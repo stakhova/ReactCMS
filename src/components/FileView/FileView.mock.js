@@ -9,27 +9,27 @@ export const TableFileList = [
     {
         id : 2 ,
         img: picture,
-        postTitle: 'Oceanic_view.jpg',
+        postTitle: 'view.jpg',
         postDate: 3,
     },
     {
         id : 3 ,
         img: picture,
-        postTitle: 'Oceanic_view.jpg',
+        postTitle: 'anic_view.jpg',
         postDate: 3,
 
     },
     {
         id : 4 ,
         img: picture,
-        postTitle: 'Oceanic_view.jpg',
+        postTitle: 'nic_view.jpg',
         postDate: 3,
 
     },
     {
         id : 5 ,
         img: picture,
-        postTitle: 'Oceanic_view.jpg',
+        postTitle: 'ic_view.jpg',
         postDate: 3,
     },
 ]

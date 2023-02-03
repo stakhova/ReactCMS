@@ -12,7 +12,9 @@ const TableItem= ({postTitle,postDate,postStatus,postStats,authorName,authorStat
     const classes = useStyles();
     const url = window.location.href.split('/'),
           urlLast = url[url.length - 1]
+
     let filePage , viewPage , createPage
+
     switch (urlLast){
         case 'files':
             filePage = true
@@ -27,32 +29,34 @@ const TableItem= ({postTitle,postDate,postStatus,postStats,authorName,authorStat
             break
     }
 
+
+
     return (
         <Box className={classes.tableItemWrap}>
-            { filePage ? <TableImgFile src={src}/>: null}
+            { filePage ? <TableImgFile src = {src}/>: null}
             <Box>
-                <TableName postTitle={postTitle} />
+                <TableName postTitle = {postTitle} />
                 { viewPage
-                    ?  <TableData variant='h5' postDate={postDate} />
+                    ?  <TableData variant = 'h5' postDate = {postDate} />
                     : null
                 }
             </Box>
             { viewPage
                 ? null
-                : <TableData variant='h6' postDate={postDate}/>
+                : <TableData variant = 'h6' postDate = {postDate}/>
             }
             { filePage
                 ? null
-                : <StatusItem postStatus={postStatus}/>
+                : <StatusItem postStatus = {postStatus}/>
             }
             { createPage
                 ? <TableAuthor
-                    authorName={authorName}
-                    authorStatus={authorStatus}/>
+                    authorName = {authorName}
+                    authorStatus = {authorStatus}/>
                 : null
             }
             { viewPage
-                ? <TableStats postStats={postStats}/>
+                ? <TableStats postStats = {postStats}/>
                 : null
             }
             <DropdownMenu/>

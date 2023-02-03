@@ -7,12 +7,12 @@ import ButtonCustom from "../ButtonCustom/ButtonCustom";
 function HeaderUserInfo( ) {
     const classes = useStyles();
     return (
-        <Box className={classes.headerInfo}>
+        <Box className = {classes.headerInfo}>
             <ButtonCustom
                 variant = 'text'
                 buttonText = "Pro plan"
             />
-            <HeaderAvatar link={Ava}/>
+            <HeaderAvatar link = {Ava}/>
         </Box>
 
     )

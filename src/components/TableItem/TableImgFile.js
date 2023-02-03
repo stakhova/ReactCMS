@@ -5,7 +5,7 @@ const TableImgFile= ({src}) => {
     const classes = useStyles();
     return (
         <Box className={classes.tableImgWrap}>
-            <img src={src} alt="photo" />
+            <img src = {src} alt = "photo" />
         </Box>
     );
 };

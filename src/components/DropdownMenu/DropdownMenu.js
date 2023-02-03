@@ -7,7 +7,7 @@ import TableEditSvg from "../../img/icon/TableEditSvg";
 import {EditSvg} from "../../img/icon/EditSvg";
 import DeleteThinSvg from "../../img/icon/DeleteThinSvg";
 
-export default function DropdownMenu() {
+const DropdownMenu = () =>{
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -20,31 +20,31 @@ export default function DropdownMenu() {
     return (
         <>
             <Box
-                id="fade-button"
-                aria-controls={open ? 'fade-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                sx={{cursor:"pointer"}}
-                onClick={handleClick}>
+                id = "fade-button"
+                aria-controls = {open ? 'fade-menu' : undefined}
+                aria-haspopup = "true"
+                aria-expanded = {open ? 'true' : undefined}
+                sx = {{cursor:"pointer"}}
+                onClick = {handleClick}>
 
                 <TableEditSvg/>
             </Box>
             <Menu
-                id="fade-menu"
-                MenuListProps={{
+                id = "fade-menu"
+                MenuListProps = {{
                     'aria-labelledby': 'fade-button',
                 }}
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                TransitionComponent={Fade}
+                anchorEl = {anchorEl}
+                open = {open}
+                onClose = {handleClose}
+                TransitionComponent = {Fade}
             >
                 <MenuItem
-                    onClick={handleClose}>
+                    onClick = {handleClose}>
                     <EditSvg/>Edit file name
                 </MenuItem>
                 <MenuItem
-                    onClick={handleClose}>
+                    onClick = {handleClose}>
                     <DeleteThinSvg/>Delete file
                 </MenuItem>
             </Menu>
@@ -53,3 +53,4 @@ export default function DropdownMenu() {
 }
 
 
+export default DropdownMenu;

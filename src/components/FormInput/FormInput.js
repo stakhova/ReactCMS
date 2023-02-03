@@ -7,23 +7,26 @@ const FormInput = (props ) =>{
     const classes = useStyles();
     const { labelIcon, labelText, value,onChange,onBlur,name,type,id,formik,elem} = props;
     return (
-        <Box className={classes.inputWrap}>
+        <Box className = {classes.inputWrap}>
             <InputLabel className = {classes.labelItem}>
                 {labelIcon}
                 <Typography
-                    sx={{marginLeft:'1.3rem'}}
-                    variant='h6'>{labelText}
+                    sx = {{marginLeft:'1.3rem'}}
+                    variant = 'h6'>{labelText}
                 </Typography>
             </InputLabel>
             <TextField
-                value={value}
-                onChange={onChange}
-                onBlur={onBlur}
-                id={id}
-                name={name}
-                type={type}
+                value = {value}
+                onChange = {onChange}
+                onBlur = {onBlur}
+                id = {id}
+                name = {name}
+                type = {type}
             />
-            <ErrorMessage formik={formik} elem={elem}/>
+            <ErrorMessage
+                formik = {formik}
+                elem = {elem}
+            />
         </Box>
     );
 }

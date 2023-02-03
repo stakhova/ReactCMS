@@ -11,8 +11,8 @@ function Header( ) {
 
     return (
         <Box className={classes.headerWrap}>
-            <Container maxWidth={false} >
-                <Box className={classes.headerBlock}>
+            <Container maxWidth = {false} >
+                <Box className = {classes.headerBlock}>
                     <Link to = '/'>
                         <LogoFullSvg/>
                     </Link>
@@ -21,7 +21,8 @@ function Header( ) {
                         <Link to = '/login'>
                            <ButtonCustom
                                variant = 'string'
-                               buttonText = "Sign in"/>
+                               buttonText = "Sign in"
+                           />
                         </Link>
                         :
                         <HeaderUserInfo/>

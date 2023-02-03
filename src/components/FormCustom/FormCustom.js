@@ -22,10 +22,10 @@ const FormCustom = () => {
 
     }
     const isAuth = (values) => {
-       if(checkLogin(values)){
-          return true
-       } else
-           alert('Wrong email or password')
+        if(checkLogin(values)){
+            return true
+        } else
+            alert('Wrong email or password')
     }
 
     const formik = useFormik({
@@ -52,7 +52,7 @@ const FormCustom = () => {
                 checkUser()
                     ? isAuth(values)
                     : alert(`You don't have account`)
-                      navigate('/registration')
+                navigate('/registration')
             }
         }
     });
@@ -63,32 +63,32 @@ const FormCustom = () => {
                     ? FormListRegistration.map((elem) => {
                         return (
                             <FormInput
-                                key={elem.id.toString()}
-                                id={elem.id}
-                                type={elem.id}
-                                labelIcon={elem.labelIcon}
-                                labelText={elem.labelText}
-                                value={formik.values[elem.id]}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                formik={formik}
-                                elem={elem.id}/>
+                                key = {elem.id.toString()}
+                                id = {elem.id}
+                                type = {elem.id}
+                                labelIcon = {elem.labelIcon}
+                                labelText = {elem.labelText}
+                                value = {formik.values[elem.id]}
+                                onChange = {formik.handleChange}
+                                onBlur = {formik.handleBlur}
+                                formik = {formik}
+                                elem = {elem.id}/>
 
                         );
                     })
                     : FormListLogin.map((elem) => {
                         return (
                             <FormInput
-                                key={elem.id.toString()}
-                                id={elem.id}
-                                type={elem.id}
-                                labelIcon={elem.labelIcon}
-                                labelText={elem.labelText}
-                                value={formik.values[elem.id]}
-                                onChange={formik.handleChange}
-                                onBlur={formik.handleBlur}
-                                formik={formik}
-                                elem={elem.id}/>
+                                key = {elem.id.toString()}
+                                id = {elem.id}
+                                type = {elem.id}
+                                labelIcon = {elem.labelIcon}
+                                labelText = {elem.labelText}
+                                value = {formik.values[elem.id]}
+                                onChange = {formik.handleChange}
+                                onBlur = {formik.handleBlur}
+                                formik = {formik}
+                                elem = {elem.id}/>
 
                         );
                     })
